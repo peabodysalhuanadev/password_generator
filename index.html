@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas | Peabody Cuaresma Salhuana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>🔐 Generador de Contraseñas</h1>
+                <p class="subtitle">Crea contraseñas seguras y personalizadas</p>
+            </div>
+
+            <div class="password-display-container">
+                <div class="password-display" id="passwordDisplay">
+                    <span id="passwordText">Genera tu contraseña</span>
+                </div>
+                <button class="copy-btn" id="copyBtn" title="Copiar contraseña">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="options">
+                <div class="length-control">
+                    <label for="lengthSlider">
+                        <span>Longitud:</span>
+                        <span class="length-value" id="lengthValue">12</span>
+                    </label>
+                    <input type="range" id="lengthSlider" min="8" max="20" value="12" class="slider">
+                    <div class="length-indicators">
+                        <span>8</span>
+                        <span>20</span>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Mayúsculas (A-Z)</span>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Minúsculas (a-z)</span>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Números (0-9)</span>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="symbols" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Símbolos (!@#$%^&*)</span>
+                    </label>
+                </div>
+
+                <div class="strength-indicator">
+                    <div class="strength-label">Seguridad:</div>
+                    <div class="strength-bars">
+                        <div class="strength-bar" data-strength="1"></div>
+                        <div class="strength-bar" data-strength="2"></div>
+                        <div class="strength-bar" data-strength="3"></div>
+                        <div class="strength-bar" data-strength="4"></div>
+                    </div>
+                    <div class="strength-text" id="strengthText">Muy Fuerte</div>
+                </div>
+            </div>
+
+            <button class="generate-btn" id="generateBtn">
+                <span>Generar Contraseña</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                </svg>
+            </button>
+
+            <div class="footer">
+                <p>© 2026 Peabody Cuaresma Salhuana</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
